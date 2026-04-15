@@ -1,0 +1,158 @@
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.main-content.chat-mode {
+    justify-content: flex-end;
+}
+
+.center-content-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 64px - 32px);
+    padding-bottom: 24px;
+    z-index: 5;
+    transition: all 0.3s ease;
+}
+
+.greeting-title {
+    font-family: 'Saint-Andrews Queen', cursive;
+    font-size: 3rem;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 32px;
+    text-align: center;
+    transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+.chat-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.chat-area::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-area::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Guest Mode Styles */
+.app-container.guest-mode .sidebar {
+    display: none !important;
+}
+
+.app-container.guest-mode .right-content {
+    width: 100%;
+}
+
+.app-container.guest-mode .top-header {
+    justify-content: space-between;
+    padding-left: 0; /* Remove padding to make logo box flush left */
+}
+
+.app-container.guest-mode .guest-logo-box {
+    display: flex !important;
+}
+
+.app-container.guest-mode .header-text {
+    display: none; /* Hide default text in guest mode to focus on logo config */
+}
+
+.app-container.guest-mode .guest-only {
+    display: flex !important;
+}
+
+.chat-area::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.empty-state {
+    height: 100%;
+}
+
+.input-area-bottom {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 24px 16px;
+    flex-shrink: 0;
+}
+
+.input-area-bottom .mode-switch {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .greeting-title {
+        font-size: 1.875rem;
+    }
+    
+    .chat-area {
+        padding: 12px 20px;
+    }
+    
+    .input-area-bottom {
+        padding: 12px 20px;
+    }
+}
+
+/* Vox Mode Active State */
+.main-content.vox-mode .search-bar {
+    background-color: transparent;
+    justify-content: center;
+    height: auto;
+    padding: 0;
+}
+
+.main-content.vox-mode .plus-button,
+.main-content.vox-mode .search-bar input {
+    display: none;
+}
+
+.main-content.vox-mode .mode-switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.main-content.vox-mode .input-area {
+    align-items: center;
+}
+
+/* In Vox Mode, move greeting to top */
+.main-content.vox-mode {
+    justify-content: flex-start;
+    padding-top: 48px;
+}
+
+.main-content.vox-mode .center-content-wrapper {
+    height: 100%;
+    justify-content: space-between;
+    padding-bottom: 20%;
+}
+
+.main-content.vox-mode .greeting-title {
+    margin-bottom: 0;
+}
+
+.main-content.vox-mode .submit-button {
+    width: 64px;
+    height: 64px;
+    background-color: var(--color-header);
+    transform: scale(1.2);
+}

@@ -1,0 +1,70 @@
+/* Font Configuration */
+@font-face {
+    font-family: 'Saint-Andrews Queen';
+    src: url('./assets/fonts/Saint-Andrews Queen.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'F25 Bank Printer';
+    src: url('./assets/fonts/F25_Bank_Printer.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'F25 Bank Printer Bold';
+    src: url('./assets/fonts/F25_Bank_Printer_Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('./assets/fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+:root {
+    --font-family: 'Inter', sans-serif;
+    --color-header: #0A400C;
+    --color-sidebar: #3C3D37;
+    --color-search: #3C3D37;
+    --color-main: #222222;
+    --color-text: #FFFFFF;
+    --color-action: #0A400C;
+    --header-height: 64px;
+    --sidebar-width-expanded: 240px;
+    --sidebar-width-collapsed: 72px;
+    --sidebar-transition: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, #root {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-main);
+    color: var(--color-text);
+    overflow: hidden;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--color-main);
+    color: var(--color-text);
+    font-size: 1.5rem;
+}

@@ -1,0 +1,59 @@
+.top-header {
+    background-color: var(--color-header);
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    flex-shrink: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    gap: 20px;
+}
+
+.guest-logo-box {
+    background-color: #000000;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    gap: 1px;
+}
+
+.header-text {
+    flex: 1;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.header-login-btn {
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: transform 0.1s, background-color 0.2s;
+    margin-right: 24px; /* Ensure spacing since top-header padding might be overridden */
+}
+
+.header-login-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.header-login-btn:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .top-header {
+        padding: 0 20px;
+        flex-wrap: wrap;
+    }
+    
+    .header-text {
+        font-size: 0.875rem;
+    }
+}
