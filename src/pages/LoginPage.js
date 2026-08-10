@@ -61,9 +61,9 @@ const LoginPage = ({ onLogin, onGuest }) => {
 
           <div className="auth-footer">
             <p>
-              <a href="#" onClick={(e) => { e.preventDefault(); handleGuestClick(); }} className="guest-link">
+              <button type="button" onClick={(e) => { e.preventDefault(); handleGuestClick(); }} className="guest-link">
                 Try as Guest
-              </a>
+              </button>
             </p>
           </div>
         </div>

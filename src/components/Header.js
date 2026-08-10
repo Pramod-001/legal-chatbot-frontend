@@ -11,7 +11,14 @@ const Header = ({ isGuest, onLoginClick }) => {
         </span>
       </div>
       <span className="header-text">Lexi Voice — Speak your problem. Discover the law.</span>
-      <a href="#" onClick={(e) => { e.preventDefault(); onLoginClick(); }} className="header-login-btn guest-only" style={{ display: isGuest ? 'block' : 'none' }}>Login</a>
+      <button
+        type="button"
+        onClick={(e) => { e.preventDefault(); onLoginClick(); }}
+        className="header-login-btn guest-only"
+        style={{ display: isGuest ? 'block' : 'none' }}
+      >
+        Login
+      </button>
     </header>
   );
 };
